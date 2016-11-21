@@ -9,7 +9,7 @@ RUN curl -o /tmp/awstats.zip -SL "http://downloads.sourceforge.net/project/awsta
 	&& unzip /tmp/awstats.zip -d /usr/local/ \
 	&& ln -s /usr/local/awstats-7.5 /usr/local/awstats \
 	&& mkdir /usr/local/awstats/data \
-	&& chmod 666 /usr/local/awstats/data
+	&& chmod 777 /usr/local/awstats/data
 
 COPY awstats.conf /usr/local/awstats/wwwroot/cgi-bin/
 COPY vhosts.conf /etc/httpd/conf.d/
